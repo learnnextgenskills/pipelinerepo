@@ -15,7 +15,7 @@ pipeline {
         }
          stage ('Build') {
             steps {
-                sh '''cd ExMaven
+                sh '''cd TestMaven
                 mvn -Dmaven.test.failure.ignore=true install
                 '''
             }
