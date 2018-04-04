@@ -26,5 +26,11 @@ pipeline {
                 }
             }
         }
+        stage ('Sonar') {
+            steps {
+                withSonarQubeEnv("http://192.168.33.10:9000") {
+                            // Github plugin for PR's (does not submit to server)
+                            sh '~/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner'
+                }
     }
 }
