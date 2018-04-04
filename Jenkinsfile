@@ -21,6 +21,7 @@ pipeline {
             }
             post {
                 success {
+                    sh 'echo $pwd'
                     junit 'target/surefire-reports/TEST-udemy.AppTest.xml' 
                 }
             }
