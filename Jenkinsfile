@@ -33,4 +33,5 @@ pipeline {
                             sh '~/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner'
                 }
     }
+        }
 }
