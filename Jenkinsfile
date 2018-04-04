@@ -22,7 +22,7 @@ pipeline {
             post {
                 success {
                     sh 'echo $pwd'
-                    junit 'target/surefire-reports/TEST-udemy.AppTest.xml' 
+                    junit 'TestMaven/target/surefire-reports/TEST-udemy.AppTest.xml' 
                 }
             }
         }
