@@ -47,6 +47,7 @@ pipeline {
                         "files": [
                             {
                              "pattern": "$WORKSPACE/*.jar",
+                             "target": "libs-snapshot-local",
                              "flat": "false",
                              "recursive": "false"
                                                          }
