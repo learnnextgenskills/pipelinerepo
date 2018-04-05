@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def server = Artifactory.server "SERVER_ID"
     tools {
         maven 'mvn'
         jdk 'JDK'
@@ -35,11 +36,10 @@ pipeline {
     }
         }
          stage ('Artifactory configuration') {
-             def server
+             
           // Obtain an Artifactory server instance, defined in Jenkins --> Manage:
              steps {
-             server = Artifactory.server SERVER_ID
-             sh 'echo ${SERVER_ID}'
+                          sh 'echo ${SERVER_ID}'
              }
          }
     }
