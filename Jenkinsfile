@@ -41,7 +41,7 @@ pipeline {
              steps {
                           
                   script {
-                      def server = Artifactory.server AF1
+                      def server = Artifactory.server 'AF1'
                       sh 'echo ${server}'
              }
              }
