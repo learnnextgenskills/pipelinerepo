@@ -43,6 +43,15 @@ pipeline {
                   script {
                       def server = Artifactory.server 'AF1'
                       sh 'echo ${server}'
+                      def uploadSpec = """{
+                        "files": [
+                            {
+                             "pattern": "$WORKSPACE/*.jar",
+                             "flat": "false",
+                             "recursive": "false"
+                                                         }
+                        ]
+                    }"""
              }
              }
          }
