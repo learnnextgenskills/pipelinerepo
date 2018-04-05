@@ -37,10 +37,11 @@ pipeline {
          stage ('Artifactory configuration') {
              
           // Obtain an Artifactory server instance, defined in Jenkins --> Manage:
-             script {
-                 def server = Artifactory.server "SERVER_ID"
+            
              steps {
                           sh 'echo ${SERVER_ID}'
+                  script {
+                 def server = Artifactory.server "SERVER_ID"
              }
              }
          }
