@@ -46,7 +46,7 @@ pipeline {
                       def uploadSpec = """{
                         "files": [
                             {
-                             "pattern": "$WORKSPACE/*.jar",
+                             "pattern": "$WORKSPACE/TestMaven/target/*.jar",
                              "target": "libs-snapshot-local",
                              "flat": "false",
                              "recursive": "false"
