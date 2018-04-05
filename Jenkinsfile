@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def server
     tools {
         maven 'mvn'
         jdk 'JDK'
