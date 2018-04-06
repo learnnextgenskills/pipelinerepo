@@ -28,15 +28,15 @@ pipeline {
         }
         stage ('Sonar') {
             steps {
-                
+                script {
                             // Github plugin for PR's (does not submit to server)
                             sh '~/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner'
                             def quality_gate = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
-                        if (quality_gate.status != 'OK') {
-                            println "Quality gate failure - marking build as unstable"
-                            currentBuild.result = 'UNSTABLE'
-                        }
-                
+                              if (quality_gate.status != 'OK') {
+                                  println "Quality gate failure - marking build as unstable"
+                                  currentBuild.result = 'UNSTABLE'
+                             }
+                }
     }
         }
          stage ('Artifactory configuration') {
