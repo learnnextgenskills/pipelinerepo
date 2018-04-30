@@ -4,7 +4,7 @@
 
   <groupId>pipeline</groupId>
   <artifactId>TestMaven</artifactId>
-  <version>1.15-SNAPSHOT</version>
+  <version>1.15</version>
   <packaging>jar</packaging>
 
   <name>TestMaven</name>
